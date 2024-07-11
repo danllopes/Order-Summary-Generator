@@ -13,7 +13,7 @@ public class Order {
     private LocalDateTime moment;
     private OrderStatus status;
 
-    private ArrayList<OrderItem> orderItems = new ArrayList<>();
+    private final ArrayList<OrderItem> orderItems = new ArrayList<>();
     private Client client;
 
     public Order() {}
@@ -78,7 +78,7 @@ public class Order {
         builder.append(this.status);
         builder.append("\nClient: ");
         builder.append(client.toSTring());
-        builder.append("\nOrder items:\n\n");
+        builder.append("\n\nOrder items:\n\n");
         for(OrderItem item : this.orderItems) {
             builder.append(item).append("\n");
         }
